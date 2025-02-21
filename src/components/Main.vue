@@ -5,24 +5,24 @@
         <div class="banner"></div>
         <div class="vNN"></div>
         <video class="vN" autoplay muted loop>
-          <source src="@/assets/wheelMovie.mp4" type="video/mp4">
+          <source src="../assets/Main/wheelMovie.mp4" type="video/mp4">
         </video>
         <div class="appCenter">
-          <div class="ac1"><img src='@/assets/qrcode.jpg' alt="qrcode"></div>
+          <div class="ac1"><img src='../assets/Main/qrcode.jpg' alt="qrcode"></div>
           <div class="ac2">
-            <img src="@/assets/download1.png" alt="download" class="ac2a">
-            <img src="@/assets/download2.png" alt="download" class="ac2a">
-            <img src="@/assets/download3.png" alt="download" class="ac2b">
-            <img src="@/assets/download4.png" alt="download" class="ac2a">
-            <img src="@/assets/download5.png" alt="download" class="ac2a">
-            <img src="@/assets/download6.png" alt="download" class="ac2b">
+            <img src="../assets/Main/download1.png" alt="download" class="ac2a">
+            <img src="../assets/Main/download2.png" alt="download" class="ac2a">
+            <img src="../assets/Main/download3.png" alt="download" class="ac2b">
+            <img src="../assets/Main/download4.png" alt="download" class="ac2a">
+            <img src="../assets/Main/download5.png" alt="download" class="ac2a">
+            <img src="../assets/Main/download6.png" alt="download" class="ac2b">
           </div>
         </div>
         <div class="center">
-          <img src="@/assets/share1.png" alt="no">
-          <img src="@/assets/share2.png" alt="no">
-          <img src="@/assets/share3.png" alt="no">
-          <img src="@/assets/share4.png" alt="no">
+          <img src="../assets/Main/share1.png" alt="no">
+          <img src="../assets/Main/share2.png" alt="no">
+          <img src="../assets/Main/share3.png" alt="no">
+          <img src="../assets/Main/share4.png" alt="no">
         </div>
         <div class="activity">
           <p>活动</p>
@@ -30,7 +30,7 @@
         <div class="option">
           <div class="language">
             <div class="languageIcon">
-              <img src="@/assets/language.png" alt="no">
+              <img src="../assets/Main/language.png" alt="no">
             </div>
             <p>简体中文</p>
             <div class="languageOption"></div>
@@ -39,11 +39,11 @@
             <div></div><div></div><div></div>
           </div>
           <div class="user">
-            <img src="@/assets/user.png" alt="no">
+            <img src="../assets/Main/user.png" alt="no">
           </div>
         </div>
         <div class="tips">
-          <img src="@/assets/scroll.png" alt="no">
+          <img src="../assets/Main/scroll.png" alt="no">
         </div>
       <News />
       <Esonators />
@@ -61,7 +61,7 @@
     </div>
   </div>
     <div :class=c3i>
-      <img src='@/assets/logo-small.png' alt="no">
+      <img src='../assets/Main/logo-small.png' alt="no">
     </div>
   </div>
 </template>
@@ -84,15 +84,21 @@ export default {
       videoName:'vN',c3i:'logo',
     }
   },
+  mounted() {
+    let aaa = document.querySelectorAll('.c2f .c2fCenter a div');
+    let a = document.querySelectorAll('.c2f .c2fCenter a');
+    aaa[0].style.opacity='1';
+    a[0].style.color='#c9ac67';
+  },
   methods:{
-link(){ 
-  let test=event.target.id - 1;
-  let aaa = document.querySelectorAll('.c2f .c2fCenter a div');
-  let a = document.querySelectorAll('.c2f .c2fCenter a');
-  for(let i=0;i<aaa.length;i++){
-    aaa[i].style.opacity="0";
-    a[i].style.color='#ffffff';
-    }
+  link(){
+    let test=event.target.id - 1;
+    let aaa = document.querySelectorAll('.c2f .c2fCenter a div');
+    let a = document.querySelectorAll('.c2f .c2fCenter a');
+    for(let i=0;i<aaa.length;i++){
+      aaa[i].style.opacity="0";
+      a[i].style.color='#ffffff';
+      }
   aaa[test].style.opacity="1"
   a[test].style.color='#c9ac67';
   }
@@ -114,7 +120,7 @@ link(){
 }
 
 .c2f .c2fCenter {
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
 }
@@ -141,14 +147,14 @@ link(){
 .c2f .c2fCenter a:nth-child(3n+1) div {
   width: 2rem;
   height: 1rem;
-  background-image: url("@/assets/hoverTop.png");
+  background-image: url("@/assets/Main/hoverTop.png");
   transform:translateX(-0.2rem);
   opacity: 0;
 }
 
 .c2f .c2fCenter a:nth-child(3n+1) div::before {
   content: "";
-  background: url("@/assets/hoverLeft.png") no-repeat;
+  background: url("@/assets/Main/hoverLeft.png") no-repeat;
   background-size: 100% 100%;
   width: 9.45rem;
   height: 2.4rem;
@@ -160,7 +166,7 @@ link(){
 
 .c2f .c2fCenter a:nth-child(3n+1) div::after {
   content: "";
-  background: url("@/assets/hoverRight.png") no-repeat;
+  background: url("@/assets/Main/hoverRight.png") no-repeat;
   background-size: 100% 100%;
   width: 9.5rem;
   height: 2.4rem;
@@ -173,14 +179,14 @@ link(){
 .c2f .c2fCenter a:nth-child(3n+2) div{
   width: 2rem;
   height: 1rem;
-  background-image: url("@/assets/hoverTop.png");
+  background-image: url("@/assets/Main/hoverTop.png");
   transform: translateY(-0.2rem) translateX(-0.2rem);
   opacity: 0;
 }
 
 .c2f .c2fCenter a:nth-child(3n+2) div::before {
   content: "";
-  background: url("@/assets/hoverLeft.png") no-repeat;
+  background: url("@/assets/Main/hoverLeft.png") no-repeat;
   background-size: 100% 100%;
   width: 9.5rem;
   height: 2.4rem;
@@ -192,7 +198,7 @@ link(){
 
 .c2f .c2fCenter a:nth-child(3n+2) div::after {
   content: "";
-  background: url("@/assets/hoverRight.png") no-repeat;
+  background: url("@/assets/Main/hoverRight.png") no-repeat;
   background-size: 100% 100%;
   width: 9.5rem;
   height: 2.4rem;
@@ -205,14 +211,14 @@ link(){
 .c2f .c2fCenter a:nth-child(3) div{
   width: 3rem;
   height: 1rem;
-  background-image: url("@/assets/hoverTop.png");
+  background-image: url("@/assets/Main/hoverTop.png");
   transform: translateY(-0.3rem) translateX(-0.2rem);
   opacity: 0;
 }
 
 .c2f .c2fCenter a:nth-child(3) div::before {
   content: "";
-  background: url("@/assets/hoverLeft.png") no-repeat;
+  background: url("@/assets/Main/hoverLeft.png") no-repeat;
   background-size: 100% 100%;
   width: 9.5rem;
   height: 2.4rem;
@@ -224,7 +230,7 @@ link(){
 
 .c2f .c2fCenter a:nth-child(3) div::after {
   content: "";
-  background: url("@/assets/hoverRight.png") no-repeat;
+  background: url("@/assets/Main/hoverRight.png") no-repeat;
   background-size: 100% 100%;
   width: 9.5rem;
   height: 2.4rem;
@@ -237,14 +243,14 @@ link(){
 .c2f .c2fCenter a:nth-child(6) div{
   width: 3rem;
   height: 1rem;
-  background-image: url("@/assets/hoverTop.png");
+  background-image: url("@/assets/Main/hoverTop.png");
   transform: translateY(-0.3rem) translateX(-0.2rem);
   opacity: 0;
 }
 
 .c2f .c2fCenter a:nth-child(6) div::before {
   content: "";
-  background: url("@/assets/hoverLeft.png") no-repeat;
+  background: url("@/assets/Main/hoverLeft.png") no-repeat;
   background-size: 100% 100%;
   width: 9.5rem;
   height: 2.4rem;
@@ -256,7 +262,7 @@ link(){
 
 .c2f .c2fCenter a:nth-child(6) div::after {
   content: "";
-  background: url("@/assets/hoverRight.png") no-repeat;
+  background: url("@/assets/Main/hoverRight.png") no-repeat;
   background-size: 100% 100%;
   width: 9.5rem;
   height: 2.4rem;
@@ -280,13 +286,13 @@ link(){
 }
 
 .banner {
+  position: fixed;
   background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.01));
   width: 100%;
   height: 16.5vh;
   z-index: 1000;
   left: 0;
   top: 0;
-  position: fixed;
 }
 
 
@@ -321,7 +327,7 @@ link(){
 
 /* main */
 .main {
-  background-image: url(../assets/wheelBeforeMovie.jpg);
+  background-image: url(../assets/Main/wheelBeforeMovie.jpg);
   background-size: cover;
   z-index: 997;
   transition: 500ms ease;
@@ -341,7 +347,7 @@ link(){
   height: 3rem;
   width: 3rem;
   position: absolute;
-  background-image: url("@/assets/play.png");
+  background-image: url("@/assets/Main/play.png");
   background-size: cover;
   top:calc(50% - 1.5rem);
   left: calc(50vw - 1.5rem);
