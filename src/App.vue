@@ -1,6 +1,6 @@
 <script setup>
-import Main from './Function/Main.vue'
-import Move from './components/Move.vue'
+import Main from './components/Main.vue'
+import Move from './Function/Move.vue'
 </script>
 
 <template>

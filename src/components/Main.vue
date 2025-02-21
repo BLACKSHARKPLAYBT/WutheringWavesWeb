@@ -33,7 +33,7 @@
               <img src="../assets/Main/language.png" alt="no">
             </div>
             <p>简体中文</p>
-            <div class="languageOption"></div>
+            <div class="languageOption" @click='ccc'></div>
           </div>
           <div class="sound">
             <div></div><div></div><div></div>
@@ -99,9 +99,12 @@ export default {
       aaa[i].style.opacity="0";
       a[i].style.color='#ffffff';
       }
-  aaa[test].style.opacity="1"
-  a[test].style.color='#c9ac67';
-  }
+  aaa[test].style.opacity="1";
+  a[test].style.color='#c9ac67';},
+  ccc(){
+      let ccc =document.querySelector('#main > div.option > div.language > div.languageOption');
+      console.log(ccc);
+    }
   }
 }
 </script>
@@ -483,10 +486,6 @@ export default {
   height: 0.35rem;
   background-color: white;
   clip-path: polygon(0 0,100% 0%,50% 100%);
-}
-
-.option .language .languageOption:active{
-  transform: rotate(180deg);
 }
 
 .option .sound {

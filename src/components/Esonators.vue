@@ -218,6 +218,7 @@ img {
   transition-delay: 100ms;
   transition-timing-function: ease-in-out;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .selector .section2 .viewbox img{
