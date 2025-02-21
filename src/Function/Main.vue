@@ -78,7 +78,7 @@ export default {
   data(){
     return {
       mainDiv:  [{'name':'main',href:'#main'},{'name':'news',href:'#news'},{'name':'esonators',href:'#esonators'},{'name':'lore',href:'#lore'},{'name':'regions'},{'name':'characters',href:'#characters'},{'name':'gallery',href:'#gallery'},{'name':'community',href:'#community'},{'name':'end',href:'#end'}],
-      c2fName:  [{'name':'首页',href:'#main','num':'1'},{'name':'资讯',href:'#news','num':'2'},{'name':'共鸣者',href:'#esonators','num':'3'},{'name':'情报',href:'#lore','num':'4'},{'name':'世界',href:'#regions','num':'5'},{'name':'储值中心',href:'#blank','num':'6'}],
+      c2fName:  [{'name':'首页',href:'#main','num':'1'},{'name':'资讯',href:'#news','num':'2'},{'name':'共鸣者',href:'#esonators','num':'3'},{'name':'情报',href:'#lore','num':'4'},{'name':'世界',href:'#regions','num':'5'},{'name':'储值中心',href:'https://github.com/BLACKSHARKPLAYBT','num':'6'}],
       //一些名称
       c1:'content',c2:'viewer',c3:'c2f',c3a:'c2fCenter',
       videoName:'vN',c3i:'logo',
@@ -439,6 +439,7 @@ export default {
   margin-left: 6px;
 }
 
+/*   右上角选项   */
 .option {
   width: 200px;
   height: 50px;
@@ -483,6 +484,11 @@ export default {
   background-color: white;
   clip-path: polygon(0 0,100% 0%,50% 100%);
 }
+
+.option .language .languageOption:active{
+  transform: rotate(180deg);
+}
+
 .option .sound {
   width: 1.5rem;
   height: 1.5rem;

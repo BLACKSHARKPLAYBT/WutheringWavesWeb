@@ -1,5 +1,5 @@
 <script setup>
-import Main from './components/Main.vue'
+import Main from './Function/Main.vue'
 import Move from './components/Move.vue'
 </script>
 
@@ -11,6 +11,10 @@ import Move from './components/Move.vue'
 </template>
 
 <style scoped>
+:root {
+  --mc-color: #c9ac67;
+}
+
 * {
   margin: 0;
   padding: 0;

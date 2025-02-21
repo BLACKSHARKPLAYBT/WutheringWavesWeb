@@ -198,7 +198,7 @@
   .new .newsContainer .article .ll{
     width: 0;
     height: 5px;
-    transition-delay: 500ms;
+    transition-delay: 100ms;
     transition: 1s;
     background-color: #c9ac67;
     position: relative;
@@ -209,6 +209,7 @@
   .new .newsContainer .article:hover .ll{
     width:100%;
   }
+
 
   .new .newsContainer .article p {
   border-radius: 50px;
